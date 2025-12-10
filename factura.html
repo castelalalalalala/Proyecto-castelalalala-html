@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .factura {
+            background-color: white;
+            padding: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .encabezado {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 20px;
+        }
+        .encabezado h1 {
+            margin: 0;
+            color: #333;
+        }
+        .info-empresa {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table th {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+        table td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .totales {
+            text-align: right;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .total-final {
+            font-size: 18px;
+            color: #333;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="factura">
+        <div class="encabezado">
+            <h1>FACTURA</h1>
+            <p>No. 001</p>
+        </div>
+        
+        <div class="info-empresa">
+            <div>
+                <h3>Empresa</h3>
+                <p>Nombre: Mi Empresa S.A.</p>
+                <p>RIF: J-123456789</p>
+                <p>Dirección: Calle Principal 123</p>
+            </div>
+            <div>
+                <h3>Cliente</h3>
+                <p>Nombre: Cliente Ejemplo</p>
+                <p>RIF: V-987654321</p>
+                <p>Dirección: Calle Secundaria 456</p>
+            </div>
+            <div>
+                <h3>Fecha</h3>
+                <p id="fecha"></p>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Descripción</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Producto 1</td>
+                    <td>2</td>
+                    <td>$50.00</td>
+                    <td>$100.00</td>
+                </tr>
+                <tr>
+                    <td>Producto 2</td>
+                    <td>1</td>
+                    <td>$75.00</td>
+                    <td>$75.00</td>
+                </tr>
+                <tr>
+                    <td>Servicio 1</td>
+                    <td>3</td>
+                    <td>$25.00</td>
+                    <td>$75.00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="totales">
+            <p>Subtotal: $250.00</p>
+            <p>IVA (16%): $40.00</p>
+            <div class="total-final">
+                <p>Total: $290.00</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('fecha').textContent = new Date().toLocaleDateString('es-ES');
+    </script>
+</body>
+</html>
