@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Asistencia</title>
+
+<script src="js/asistencia.js"></script>
+
+</head>
+
+<body onload="cargarfichas()">
+
+<table align="center" width="50%" border="1">
+
+<tr>
+
+<td>Ficha</td>
+
+<td>
+
+<select id="Ficha" onchange="cargarAprendices();">
+
+</select>
+
+</td>
+
+</tr>
+
+</table>
+
+<table align="center">
+
+<thead>
+
+<tr>
+
+<th colspan="2">Lista de aprendices</th>
+
+</tr>
+
+</thead>
+
+<tbody id="listaAprendices"></tbody>
+
+
+<tfoot>
+    <tr>
+        <td colspan="2" align="center"><button type="button">Guardar Asistencia</button></td>
+    </tr>
+
+
+</tfoot>
+
+
+
+</table>
+
+
+</body>
+
+
+</html>
