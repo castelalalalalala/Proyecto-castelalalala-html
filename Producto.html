@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Producto</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      background: #f4f4f4;
+    }
+    .contenedor {
+      width: 300px;
+      margin: 50px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    select, input, button {
+      width: 100%;
+      margin-top: 10px;
+      padding: 8px;
+    }
+    #resultado {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contenedor">
+    <h3>Comprar producto</h3>
+
+    <select id="producto">
+      <option value="0">Seleccione producto</option>
+      <option value="10000">Camisa - $10.000</option>
+      <option value="20000">Pantalón - $20.000</option>
+    </select>
+
+    <input type="number" id="cantidad" value="1" min="1">
+
+    <button id="btnCalcular">Calcular</button>
+
+    
+    <div id="resultado">Total: </div>
+  </div>
+
+ 
+  <script src="js/Calculo.js"></script>
+
+</body>
+</html>
